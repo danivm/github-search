@@ -1,0 +1,73 @@
+body {
+	background: #F0F0F0;
+	font-family: 'Arial'
+}
+.main-container {
+	background: white;
+	padding: 20px;	
+	margin: 30px auto;
+	width: 400px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+	
+}
+input {
+	padding: 7px;
+	width: 80%;
+	border-radius: 5px;
+	border: 1px solid silver;
+}
+button {
+	padding: 7px;
+	border-radius: 5px;
+	border: 1px solid silver;
+	background: #F0F0F0;
+}
+img {
+	width: 100px;
+}
+#user {
+	margin-top: 10px;	
+}
+.user-img {
+	padding: 10px;
+	display: inline-block;
+}
+
+.user-info {
+	display: inline-block;
+	padding: 10px;
+	vertical-align: top;
+}
+.user-info p {
+	margin: 0;
+}
+.user-info h1 {
+	margin: 10px 0;
+}
+#repos {
+	max-height: 400px;
+	overflow: hidden;
+}
+.title {
+	padding: 10px 0;
+	margin: 0;	
+	border-bottom: 2px solid black;
+}
+.repo-container {
+	border-bottom: 1px solid #D7D7D7;
+}
+.repo-name {
+	width: 65%;
+	padding: 15px;
+	display: inline-block;
+}
+.repo-container h3, .repo-container p {
+	margin: 0;
+}
+.repo-info {
+	width: 20%;
+	float: right;
+	text-align: right;
+	padding: 15px;
+}
