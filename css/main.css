@@ -45,9 +45,9 @@ img {
 .user-info h1 {
 	margin: 10px 0;
 }
-#repos {
-	max-height: 400px;
-	overflow: hidden;
+.repo-list {
+	max-height: 300px;
+	overflow: scroll;
 }
 .title {
 	padding: 10px 0;
@@ -70,4 +70,11 @@ img {
 	float: right;
 	text-align: right;
 	padding: 15px;
+}
+.error {
+	background: #F9DEDE;
+	color: #A73F3E;
+	padding: 20px;
+	border: 1px solid #D7BBBB;
+	border-radius: 3px;
 }

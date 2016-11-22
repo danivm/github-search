@@ -5,8 +5,12 @@ const getUser = ( username ) => {
 			url = "https://api.github.com/users/"+username;
 			xhr.open(method, url, true);
 			xhr.onreadystatechange = () => {
-				if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-					resolve(xhr.responseText)
+				if ( xhr.status === 200 ) {
+					if ( xhr.readyState === XMLHttpRequest.DONE ) {
+						resolve(xhr.responseText)
+					} 					
+				} else {
+					reject('Does not exist.')
 				}
 			};
 			xhr.send();
@@ -22,7 +26,7 @@ const getRepos = ( username ) => {
 			xhr.onreadystatechange = () => {
 				if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
 					resolve(xhr.responseText)
-				}
+				} 
 			};
 			xhr.send();
 	})
