@@ -10,7 +10,12 @@ const getUser = ( username ) => {
 						resolve(xhr.responseText)
 					} 					
 				} else {
-					reject('Does not exist.')
+					if ( xhr.status === 404 ) {
+						reject('Does not exist.')
+					} else {
+						reject('Error: '+xhr.status)
+					}
+					
 				}
 			};
 			xhr.send();

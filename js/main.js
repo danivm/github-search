@@ -1,6 +1,3 @@
-const oRepos = document.querySelector("#repos");
-const oUser = document.querySelector("#user");
-
 document.querySelector("#user-form").addEventListener("submit", function(event){
 	event.preventDefault()
 	const username = event.target[0].value
@@ -11,10 +8,8 @@ document.querySelector("#user-form").addEventListener("submit", function(event){
 		.catch( showError.bind(null,oUser,oRepos) )
 	getRepos(username)
 		.then( showRepos.bind(null,oRepos) )
-		.catch(console.log)
+		.catch( console.log )
 });
-
-// TESTABLE
 
 function showUser(oElem, response) {
 	oElem.innerHTML = generateHtmlUser(response)	
